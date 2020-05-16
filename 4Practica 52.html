@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 52-->
+
+<head>
+    <title>Practica 52</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <script>
+        var vecte = [];
+        var f;
+        for (f = 0; f <= 10; f++) {
+            vecte[f] = parseInt(Math.random() * 1000);
+        }
+        document.write('This is the Orginal vector.');
+        document.write('<br>');
+        for (f = 0; f < vecte.length; f++) {
+            document.write(vecte[f]);
+            document.write('<br>');
+        }
+        document.write('<br>');
+        var less = vecte[0];
+        var b = 0;
+        for (f = 1; f < vecte.length; f++) {
+            if (vecte[f] < less) {
+                less = vecte[f];
+                b = f;
+            }
+        }
+        document.write('<br>');
+        document.write('The less vector is:');
+        document.write('<br>');
+        document.write(less);
+        document.write('<br>');
+        document.write('<br>');
+        var vectu;
+        vectu = vecte.slice(b);
+        document.write('This is the resulting vector:');
+        document.write('<br>');
+        for (f = 0; f < vectu.length; f++) {
+            document.write(vectu[f]);
+            document.write('<br>');
+        }
+    </script>
+
+</body>
+
+</html>
